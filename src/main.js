@@ -1,7 +1,3 @@
-import SimpleLightbox from "simplelightbox";
-// Додатковий імпорт стилів
-import "simplelightbox/dist/simple-lightbox.min.css";
-
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 
@@ -27,8 +23,8 @@ form.addEventListener('submit', async event => {
 
     try {
         loader.style.display = 'block';
-        const response = await fetchImages(query); // Pass the query to fetchImages
-        const images = response; // response is the array of image objects
+        const response = await fetchImages(query);
+        const images = response.hits;
         if (typeof images === 'string') {
             iziToast.error({
                 title: 'Error:',
@@ -49,3 +45,4 @@ form.addEventListener('submit', async event => {
         form.reset();
     }
 });
+

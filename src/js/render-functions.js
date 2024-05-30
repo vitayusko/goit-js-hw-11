@@ -1,8 +1,7 @@
 import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
 
-
-function imgRender(images) {
+function renderImages(images) {
     const gallery = document.querySelector('.gallery');
     gallery.innerHTML = '';
     if (images.length === 0) {
@@ -19,10 +18,10 @@ function imgRender(images) {
                         <img src="${img.webformatURL}" alt="${img.tags}">
                     </a>
                     <ul class="item-info">
-                        <li><h3>Likes</h3><p>${img.likes}</p></li>
-                        <li><h3>Views</h3><p>${img.views}</p></li>
-                        <li><h3>Comments</h3><p>${img.comments}</p></li>
-                        <li><h3>Downloads</h3><p>${img.downloads}</p></li>
+                        <li class= "item-list"><h3>Likes</h3><p>${img.likes}</p></li>
+                        <li class= "item-list"><h3>Views</h3><p>${img.views}</p></li>
+                        <li class= "item-list"><h3>Comments</h3><p>${img.comments}</p></li>
+                        <li class= "item-list"><h3>Downloads</h3><p>${img.downloads}</p></li>
                     </ul>
                 </li>
             `;
@@ -36,4 +35,4 @@ function imgRender(images) {
     });
 }
 
-export default imgRender;
+export default renderImages;

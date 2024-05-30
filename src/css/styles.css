@@ -178,3 +178,41 @@ section {
 .gallery-item {
   width: calc((100% - 16px*2) / 3);
 }
+
+.item-info {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+
+}
+
+.gallery-item {
+  border: 1px solid #808080;
+}
+
+h3 {
+  color: #2E2F42;
+    font-family: Montserrat;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.33;
+    letter-spacing: 0.02em;
+}
+
+.item-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+p {
+  color: #2E2F42;
+    font-family: Montserrat;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2;
+    letter-spacing: 0.03em;
+}
